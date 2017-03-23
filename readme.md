@@ -12,13 +12,13 @@ The basic ingredient that makes modern computers possible is silicone. It is one
 
 Only the outer shell is relevant for most of silicones properties. The four electrons make silicone form a crystal structure:
 
-![Figure 2 is broken](pictures/fig002.png"Figure 2") 
+![Figure 2 is broken](pictures/fig002.png "Figure 2") 
 
 You can see that all the electrons are part of a bond between two adjacent silicone atoms. That fixes them in place and prevents them from moving around. This means that pure silicone does not conduct electricity, because it does not have any charge carriers that can move around.
 
 We can, however, introduce more electrons into the crystal. To do that, we take the next element in the periodic table, Phosphorus, and replace a few silicone atoms with Phosphorus. This process is called doping. Having the atomic number 15, Phosphorus' outer shell contains five electrons instead of four like in silicone. When mixed into the silicone mix, the same crystal structure still forms:
 
-![Figure 3 is broken](pictures/fig003.png"Figure 3")
+![Figure 3 is broken](pictures/fig003.png "Figure 3")
 
 However, as you can see, the extra electron (highlighted in green) is not part of any bond. Therefore, it can move around freely. This means that N-type Phosphorous (called like that because electrons are **n**egatively charged) is a conductor.
 
@@ -34,7 +34,7 @@ Theoretically, any element from the 13th and 15th group can be used to dope sili
 
 These two types can now be combined into electronic components. The most simple one is a diode:
 
-![Figure 5 is broken, it would be an awesome gif](pictures/fig005b.gif"Figure 5")
+![Figure 5 is broken, it would be an awesome gif](pictures/fig005b.gif "Figure 5")
 
 As you can see in the animation (TODO: is there actually an animation?), the electrons close to the border jump into the holes and create a small zone that contains neither holes nor electrons. However, the region is now positively and negatively charged due to the lack of electrons in the N-type silicone and additional electrons in the P-type silicone. These charged regions become important later because they are required for a transistor to function properly.
 
@@ -46,7 +46,7 @@ In this first case, the positive pole attrackts the electrons that are inside th
 
 If a voltage is applied the other way around, this happens:
 
-![Figure 7 is broken](pictures/fig007.png"Figure 7")
+![Figure 7 is broken](pictures/fig007.png "Figure 7")
 
 The electrons are pulled towards the positive pole, away from the border and the holes are attrackted to the negative pole. As the empty border area gets wider and wider, the electrons and holes are now so far away from each other that they cannot diffuse into each other. Therefore, the movement stops, as no new holes and electrons can be generated in the border region. The arrows are only dotted because no current can flow.
 
