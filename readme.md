@@ -56,17 +56,17 @@ This demonstrates why current can only flow in one direction inside a diode.
 
 The next step up in complexity is a transistor. Unlike a diode, which consists of two layers of silicone, a transistor has three. We used NPN transistors:
 
-TODO: Figure 8
+![Figure 8 is broken, it would be a neat gif](pictures/fig008b.gif "Figure 8")
 
 As you can see in the animation (TODO: Is there an animation?), no current can flow through the transistor. Regardless of the direction, at one of the borders, the electrons and holes move away from each other (marked with a questionmark), which creates a scenario just like in the diode.
 
 There is, however, a trick to make the transistor conduct electricity:
 
-TODO: Figure 9
+![Figure 9 is broken](pictures/fig009.png "Figure 9")
 
 By applying a second voltage between one of the N-type parts and the middle, those two parts act like the diodes we had above. Electrons are moving from the left to the middle (which is called the base). Normally, they would all move out at the bottom, but here the charged regions near the border become important:
 
-TODO Figure 10
+![Figure 10 is broken](pictures/fig010.png "Figure 10")
 
 As the electrons move through the base, pulled be the current applied to the base and emitter (it does the exact opposite of emitting electrons, but engineers usually think of positive charge carriers, so the names emitter and collector are referring to those), they are attracted by the positive charge next to the border region. Once they cross the border region, there is a current flowing from one side of the transistor to the other one. To make this work well, the base needs to be very thin, otherwise, the electrons will not be attracted strongly enough by the positive charge.
 
@@ -93,7 +93,7 @@ If both transistors are active, the current flows from the positive pole through
 
 Because we assumed that having quite a few AND gates would be helpful, we devised an efficient layout so we could fit as many as possible onto a small copper-plated plastic board. Here are some pictures of the soldering process:
 
-TODO: Pictures of the gate
+![A pictue of AND gates in the soldering process is broken](pictures/fig011.5.png "A batch of AND gates in the soldering process")
 
 We also built a few NAND gates, which are quite similar to the AND gate, except that they output the inverse:
 
@@ -135,7 +135,7 @@ def reliableInput(pin):
 time.sleep(0.01)
 ```
 
-After that, it is whether both true and false account for more than 30 percent of the samples:
+After that, we check whether both true and false account for more than 30 percent of the samples:
 
 ```python
 if(amountTrue>(.3*testCount)and amountFalse>(.3*testCount) ):
