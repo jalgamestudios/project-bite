@@ -87,7 +87,7 @@ A simple logic gate is the AND gate. It only turns the output on when both input
 
 This is how an AND gate is built using transistors:
 
-TODO: Figure 11
+![Figure 11 is broken](pictures/fig011.png "Figure 11")
 
 If both transistors are active, the current flows from the positive pole through the transistors and to the output. The pull-down resistor is required to make sure that the output is connected to the negative pole when the transistors are not both active. We learned the hard way that there is a distinction between having something disconnected and connecting it to the negative pole.
 
@@ -208,7 +208,7 @@ After doing some research, we found out that the best way to build a counter is 
 
 For our counter, we use a trick: When both J and K are turned on, the flipflop will change its state every time the rising edge occurs. Because the flipflop only triggers on the rising edge, the output has half the frequency of the input. By chaining multiple JK fliplops together, with the output of one feeding into the clock of the next one, we can create this cascade-like effect:
 
-TODO: Figure 12
+![Figure 12 is broken](pictures/fig012.png "Figure 12")
 
 This is exactly what we want: A binary counter. 
 
