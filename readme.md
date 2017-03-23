@@ -36,7 +36,7 @@ These two types can now be combined into electronic components. The most simple 
 
 ![Figure 5 is broken, it would be an awesome gif](pictures/fig005b.gif "Figure 5")
 
-As you can see in the animation (TODO: is there actually an animation?), the electrons close to the border jump into the holes and create a small zone that contains neither holes nor electrons. However, the region is now positively and negatively charged due to the lack of electrons in the N-type silicone and additional electrons in the P-type silicone. These charged regions become important later because they are required for a transistor to function properly.
+As you can see in the animation, the electrons close to the border jump into the holes and create a small zone that contains neither holes nor electrons. However, the region is now positively and negatively charged due to the lack of electrons in the N-type silicone and additional electrons in the P-type silicone. These charged regions become important later because they are required for a transistor to function properly.
 
 The interesting property of diods becomes clear when a voltage is applied at both ends:
 
