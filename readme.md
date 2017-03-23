@@ -8,23 +8,23 @@ After some simple experiments, I lost the will to continue, so I put the Breadbo
 ## Silicone
 The basic ingredient that makes modern computers possible is silicone. It is one of the most common metals on the earth, but it has a few interesting properties. Being the fourteenth element in the periodic table, it has three shells, the structure of which can be seen in this picture:
 
-TODO: Figure 1
+![Figure 1 is broken](pictures/fig001.png "Figure 1")
 
 Only the outer shell is relevant for most of silicones properties. The four electrons make silicone form a crystal structure:
 
-TODO: Figure 2
+![Figure 2 is broken](pictures/fig002.png "Figure 2") 
 
 You can see that all the electrons are part of a bond between two adjacent silicone atoms. That fixes them in place and prevents them from moving around. This means that pure silicone does not conduct electricity, because it does not have any charge carriers that can move around.
 
 We can, however, introduce more electrons into the crystal. To do that, we take the next element in the periodic table, Phosphorus, and replace a few silicone atoms with Phosphorus. This process is called doping. Having the atomic number 15, Phosphorus' outer shell contains five electrons instead of four like in silicone. When mixed into the silicone mix, the same crystal structure still forms:
 
-TODO: Figure 3
+![Figure 3 is broken](pictures/fig003.png "Figure 3")
 
 However, as you can see, the extra electron (highlighted in green) is not part of any bond. Therefore, it can move around freely. This means that N-type Phosphorous (called like that because electrons are **n**egatively charged) is a conductor.
 
 There is a second type of doped silicone. This time, the silicone is replaced with an element that has one fewer electron. The element that comes before Silicone in the periodic table is Aluminium and it is sometimes used, but most of the times, Boron (atomic number 5) is used instead. It has the same number of electrons on the outer shell as Aluminum, but allows electrons to move more freely. This type of silicone is called P-type (although one fewer electron might imply a positive charge, Boron also has one proton less, so N-type and P-type silicone is still not charged):
 
-TODO: Figure 4
+![Figure 4 is broken](pictures/fig004.png "Figure 4")
 
 The orange circles represent a hole in the crystal structure. These cannot move directly, but electrons can jump out of the crystal structure into a hole, leaving another hole at their origin. This means that P-type silicone is also a conductor. While not technically correct, one can imagine the holes moving from the positive to the negative pole as positive charge carriers.
 
@@ -34,20 +34,69 @@ Theoretically, any element from the 13th and 15th group can be used to dope sili
 
 These two types can now be combined into electronic components. The most simple one is a diode:
 
-TODO: Figure 5
+![Figure 5 is broken, it would be an awesome gif](pictures/fig005b.gif "Figure 5")
 
-As you can see in the animation (TODO: is there actually an animation?), the electrons close to the border jump into the holes and create a small zone that contains neither holes nor electrons. However, the region is now positively and negatively charged due to the lack of electrons in the N-type silicone and additional electrons in the P-type silicone. These charged regions become important later because they are required for a transistor to function properly.
+As you can see in the animation, the electrons close to the border jump into the holes and create a small zone that contains neither holes nor electrons. However, the region is now positively and negatively charged due to the lack of electrons in the N-type silicone and additional electrons in the P-type silicone. These charged regions become important later because they are required for a transistor to function properly.
 
 The interesting property of diods becomes clear when a voltage is applied at both ends:
 
-TODO: Figure 6
+![Figure 6 is broken](pictures/fig006.png "Figure 6")
 
 In this first case, the positive pole attrackts the electrons that are inside the P-type silicone, creating new holes as it rips them from the crystal structure. On the other side, the negative pole moves electrons into the N-type silicone. When an electron and a hole meet in the middle, they both disappear. The arrows in the image indicate the direction of movement for the holes and electrons. Because they are both moving towards the central border, where they disappear, current can flow.
 
 If a voltage is applied the other way around, this happens:
 
-TODO: Figure 7
+![Figure 7 is broken](pictures/fig007.png "Figure 7")
 
 The electrons are pulled towards the positive pole, away from the border and the holes are attrackted to the negative pole. As the empty border area gets wider and wider, the electrons and holes are now so far away from each other that they cannot diffuse into each other. Therefore, the movement stops, as no new holes and electrons can be generated in the border region. The arrows are only dotted because no current can flow.
 
 This demonstrates why current can only flow in one direction inside a diode.
+
+## Transistors
+
+The next step up in complexity is a transistor. Unlike a diode, which consists of two layers of silicone, a transistor has three. We used NPN transistors:
+
+TODO: Figure 8
+
+As you can see in the animation (TODO: Is there an animation?), no current can flow through the transistor. Regardless of the direction, at one of the borders, the electrons and holes move away from each other (marked with a questionmark), which creates a scenario just like in the diode.
+
+There is, however, a trick to make the transistor conduct electricity:
+
+TODO: Figure 9
+
+By applying a second voltage between one of the N-type parts and the middle, those two parts act like the diodes we had above. Electrons are moving from the left to the middle (which is called the base). Normally, they would all move out at the bottom, but here the charged regions near the border become important:
+
+TODO Figure 10
+
+As the electrons move through the base, pulled be the current applied to the base and emitter (it does the exact opposite of emitting electrons, but engineers usually think of positive charge carriers, so the names emitter and collector are referring to those), they are attracted by the positive charge next to the border region. Once they cross the border region, there is a current flowing from one side of the transistor to the other one. To make this work well, the base needs to be very thin, otherwise, the electrons will not be attracted strongly enough by the positive charge.
+
+This design turns a transistor into what can be considered an electronic switch. By applying a voltage to the base, the switch is turned on and current can flow, otherwise, current flow is prevented.
+
+## Logic Gates
+
+Now that we know how transistors work, we can move up one level, to logic gates.
+
+## Sources
+
+[How a transistor works *by Ben Eater, last accessed on March 23rd, 2017*](https://www.youtube.com/watch?v=DXvAlwMAxiA)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
