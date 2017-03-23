@@ -135,7 +135,7 @@ def reliableInput(pin):
 time.sleep(0.01)
 ```
 
-After that, it is whether both true and false account for more than 30 percent of the samples:
+After that, we check whether both true and false account for more than 30 percent of the samples:
 
 ```python
 if(amountTrue>(.3*testCount)and amountFalse>(.3*testCount) ):
