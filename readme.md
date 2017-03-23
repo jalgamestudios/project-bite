@@ -187,6 +187,10 @@ print("-------ERROR---------")
 
 In that case, the gate is not working. Most of the time, this happens because the output is always false.
 
+Here's a picture of the gate-checker in action:
+
+![Photo 1 is broken](pictures/photo-1.png "Photo 1")
+
 ## More complicated circuits
 
 This is the point where we made a mistake. We had working AND, NAND and even XOR gates (the latter require 6 transistors and are therefore a lot more error-prone. We now planned to use those gates to build a more complicated circuit. Instead, we probably should have ordered a few integrated circuits. They are simply, fairly cheap components that contain a few logic gates. This would have allowed us to focus more on building the circuits and less on fixing the gates.
