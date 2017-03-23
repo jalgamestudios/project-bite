@@ -93,9 +93,9 @@ If both transistors are active, the current flows from the positive pole through
 
 Because we assumed that having quite a few AND gates would be helpful, we devised an efficient layout so we could fit as many as possible onto a small copper-plated plastic board. Here are some pictures of the soldering process:
 
-![A pictue of AND gates in the soldering process is broken](pictures/fig011.1.png "A row of resistors during the AND gate manufacturing process")
-![A pictue of AND gates in the soldering process is broken](pictures/fig011.2.png "The copper-plated underside")
-![A pictue of AND gates in the soldering process is broken](pictures/fig011.3.png "The plastic upside")
+![A pictue of AND gates in the soldering process is broken](pictures/fig011.1.jpg "A row of resistors during the AND gate manufacturing process")
+![A pictue of AND gates in the soldering process is broken](pictures/fig011.2.jpg "The copper-plated underside")
+![A pictue of AND gates in the soldering process is broken](pictures/fig011.3.jpg "The plastic upside")
 ![A pictue of AND gates in the soldering process is broken](pictures/fig011.5.png "A batch of AND gates in the soldering process")
 
 We also built a few NAND gates, which are quite similar to the AND gate, except that they output the inverse:
