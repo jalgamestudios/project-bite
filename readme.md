@@ -184,27 +184,42 @@ print("-------ERROR---------")
 
 In that case, the gate is not working. Most of the time, this happens because the output is always false.
 
+## More complicated circuits
+
+This is the point where we made a mistake. We had working AND, NAND and even XOR gates (the latter require 6 transistors and are therefore a lot more error-prone. We now planned to use those gates to build a more complicated circuit. Instead, we probably should have ordered a few integrated circuits. They are simply, fairly cheap components that contain a few logic gates. This would have allowed us to focus more on building the circuits and less on fixing the gates.
+
+However, we didn't realize this until too late, which slowed our progress down quite a lot.
+
+We were considering a few things:
+
++ **A brainfuck computer**
+  This was a completely crazy idea. Brainfuck is a simple and strange programming language. It consists of a series of cells. The program can move a pointer along those cells and can increase or decrease the value in those cells. The last commands are loops, which are executed until the cell is 0. In spite of this simplicity, Brainfuck is turing complete. This would have been the easiest programming language to implement and with integrated circuits and without the Abitur, we might have succeeded in implementing at least part of the functions (loops are the most complicated), but quickly removed that idea from our list.
++ **An adder**
+  Using AND and XOR gates, one can build an adder. That is a circuit that takes two inputs consisting of *n* bytes and ouputs the sum of those binary numbers in a *n + 1* long binary number. This would have been feasible to construct, but we decided not to do this because we didn't find it particularly interesting.
++ **A clock / counter**
+  Here the idea is to have an oscillating time source (real clocks use crystals, we were planning to use a capacitor that charges and discharges in a fairly constant period). This switching of currents then triggers a change in some kind of counting circuit that counts how often the time source signal has changed. This idea seemed both fun and doable in the short timeframe.
+
+## Binary Counter
+
+After doing some research, we found out that the best way to build a counter is to chain a series of clocked JK flipflops together. In general, a flipflop is a circuit that can flip between two states. By using the J and K input pins of a JK flipflop, we can set it to 0 or 1 and it will remain in that state even after the inputn pin is turned off. Because it is a clocked flipflop, it has a third input pin that receives a clock signal. This clock signal periodically turns on and off. Whenever the switch from off to on occurs (called the *rising edge*), the flipflip accepts the state change signaled by the J and K input pin.
+
+For our counter, we use a trick: When both J and K are turned on, the flipflop will change its state every time the rising edge occurs. Because the flipflop only triggers on the rising edge, the output has half the frequency of the input. By chaining multiple JK fliplops together, with the output of one feeding into the clock of the next one, we can create this cascade-like effect:
+
+TODO: Figure 12
+
+This is exactly what we want: A binary counter. 
+
+We built a total of four flipflops, each of them consisting of four NAND gates and one AND gate. The wiring is quite complicated, because the outputs are fed back into the inputs.
+
+Three of the four flipflops worked (we were unable to determine the fault in the broken flipflop), so we tried chaining them together. This, however, was rather unsuccessful.
+
+The first issue we ran into was that our clock sources was not producing a clean signal. We used a button which we operated manually, but the button has a tendency to bounce, creating multiple rising edges a few milliseconds apart. We were able to mitigate this effect by adding a capacitor to the button. Because the capacitor needs some time to charge, the small bounces are evened out.
+
+The second problem was on a more fundamental level. All the time, we had assumed that transistors were binary switches that only had an on and an off state. In practise, that is not the case. Depending on the voltage at base and collector, a transistor might not be fully saturated. Current will flow from collector to emitter, but it is proportional to the base voltage. This results in situations where the input voltage at the next transistor is not high enough to turn it on and similar errors.
+
+We were unable to fix those issues at the time of writing, so here are a few pictures of us building the circuits instead:
+
 ## Sources
 
 [How a transistor works *by Ben Eater, last accessed on March 23rd, 2017*](https://www.youtube.com/watch?v=DXvAlwMAxiA)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[Logic gate circuit diagrams](http://hyperphysics.phy-astr.gsu.edu/hbase/Electronic/trangate.html)
