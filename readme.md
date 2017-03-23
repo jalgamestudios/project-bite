@@ -51,3 +51,52 @@ TODO: Figure 7
 The electrons are pulled towards the positive pole, away from the border and the holes are attrackted to the negative pole. As the empty border area gets wider and wider, the electrons and holes are now so far away from each other that they cannot diffuse into each other. Therefore, the movement stops, as no new holes and electrons can be generated in the border region. The arrows are only dotted because no current can flow.
 
 This demonstrates why current can only flow in one direction inside a diode.
+
+## Transistors
+
+The next step up in complexity is a transistor. Unlike a diode, which consists of two layers of silicone, a transistor has three. We used NPN transistors:
+
+TODO: Figure 8
+
+As you can see in the animation (TODO: Is there an animation?), no current can flow through the transistor. Regardless of the direction, at one of the borders, the electrons and holes move away from each other (marked with a questionmark), which creates a scenario just like in the diode.
+
+There is, however, a trick to make the transistor conduct electricity:
+
+TODO: Figure 9
+
+By applying a second voltage between one of the N-type parts and the middle, those two parts act like the diodes we had above. Electrons are moving from the left to the middle (which is called the base). Normally, they would all move out at the bottom, but here the charged regions near the border become important:
+
+TODO Figure 10
+
+As the electrons move through the base, pulled be the current applied to the base and emitter (it does the exact opposite of emitting electrons, but engineers usually think of positive charge carriers, so the names emitter and collector are referring to those), they are attracted by the positive charge next to the border region. Once they cross the border region, there is a current flowing from one side of the transistor to the other one. To make this work well, the base needs to be very thin, otherwise, the electrons will not be attracted strongly enough by the positive charge.
+
+This design turns a transistor into what can be considered an electronic switch. By applying a voltage to the base, the switch is turned on and current can flow, otherwise, current flow is prevented.
+
+## Logic Gates
+
+Now that we know how transistors work, we can move up one level, to logic gates.
+
+## Sources
+
+[How a transistor works *by Ben Eater, last accessed on March 23rd, 2017*](https://www.youtube.com/watch?v=DXvAlwMAxiA)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
