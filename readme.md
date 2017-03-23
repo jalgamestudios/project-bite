@@ -58,7 +58,7 @@ The next step up in complexity is a transistor. Unlike a diode, which consists o
 
 ![Figure 8 is broken, it would be a neat gif](pictures/fig008b.gif "Figure 8")
 
-As you can see in the animation (TODO: Is there an animation?), no current can flow through the transistor. Regardless of the direction, at one of the borders, the electrons and holes move away from each other (marked with a questionmark), which creates a scenario just like in the diode.
+As you can see in the animation, no current can flow through the transistor. Regardless of the direction, at one of the borders, the electrons and holes move away from each other (marked with a questionmark), which creates a scenario just like in the diode.
 
 There is, however, a trick to make the transistor conduct electricity:
 
@@ -93,6 +93,9 @@ If both transistors are active, the current flows from the positive pole through
 
 Because we assumed that having quite a few AND gates would be helpful, we devised an efficient layout so we could fit as many as possible onto a small copper-plated plastic board. Here are some pictures of the soldering process:
 
+![A pictue of AND gates in the soldering process is broken](pictures/fig011.1.png "A row of resistors during the AND gate manufacturing process")
+![A pictue of AND gates in the soldering process is broken](pictures/fig011.2.png "The copper-plated underside")
+![A pictue of AND gates in the soldering process is broken](pictures/fig011.3.png "The plastic upside")
 ![A pictue of AND gates in the soldering process is broken](pictures/fig011.5.png "A batch of AND gates in the soldering process")
 
 We also built a few NAND gates, which are quite similar to the AND gate, except that they output the inverse:
