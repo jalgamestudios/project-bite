@@ -1,11 +1,21 @@
 # Project Bite
 
-## Our plan
+## Table of Contents
+
+1. [Our plan](#plan)
+2. [Silicone](#silicone)
+3. [Diodes](#diodes)
+4. [Transistors](#transistors)
+5. [Logic Gates](#logicgates)
+5. [More complicated circuits](#complicated)
+5. [Binary Counter](#counter)
+
+## Our plan<a name="plan"></a>
 Some time ago, I noticed how inexpensive it was to purchase transistors on Amazon. So naturally, I ordered a few hundred, which arrived a month later, as they were shipped from China. I had also ordered a few resistors and some other electronic components, so in theory I had everything required to build circuits.
 
 After some simple experiments, I lost the will to continue, so I put the Breadboard away and left it in a drawer for half a year. When we had to choose what to do in our computer Science class, Luis and I decided to use the components to make something. We anticipated hitting some difficulties, so we decided not to set any specific goals, instead making up new goals as we went along.
 
-## Silicone
+## Silicone<a name="silicone"></a>
 The basic ingredient that makes modern computers possible is silicone. It is one of the most common metals on the earth, but it has a few interesting properties. Being the fourteenth element in the periodic table, it has three shells, the structure of which can be seen in this picture:
 
 ![Figure 1 is broken](pictures/fig001.png "Figure 1")
@@ -30,7 +40,7 @@ The orange circles represent a hole in the crystal structure. These cannot move 
 
 Theoretically, any element from the 13th and 15th group can be used to dope silicone, but Boron and Phosphorus are most commonly used.
 
-## Diodes
+## Diodes<a name="diodes"></a>
 
 These two types can now be combined into electronic components. The most simple one is a diode:
 
@@ -52,7 +62,7 @@ The electrons are pulled towards the positive pole, away from the border and the
 
 This demonstrates why current can only flow in one direction inside a diode.
 
-## Transistors
+## Transistors<a name="transistors"></a>
 
 The next step up in complexity is a transistor. Unlike a diode, which consists of two layers of silicone, a transistor has three. We used NPN transistors:
 
@@ -72,7 +82,7 @@ As the electrons move through the base, pulled be the current applied to the bas
 
 This design turns a transistor into what can be considered an electronic switch. By applying a voltage to the base, the switch is turned on and current can flow, otherwise, current flow is prevented.
 
-## Logic Gates
+## Logic Gates<a name="logicgates"></a>
 
 Now that we know how transistors work, we can move up one level, to logic gates. *Side note: From now on, we will assume charge flows from the plus to the minus pole, as this is how everyone does when discussing electronic circuits.* These are digital constructs that take a number of inputs (usually two) that have the value 0 or 1 (represented by connecting the input to a high or low voltage. The logic gates process those inputs in some way and then return an output, also either a 0 or a 1.
 
@@ -189,9 +199,9 @@ In that case, the gate is not working. Most of the time, this happens because th
 
 Here's a picture of the gate-checker in action:
 
-![Photo 1 is broken](pictures/photo-1.png "Photo 1")
+![Photo 1 is broken](pictures/photo-1.jpeg "Photo 1")
 
-## More complicated circuits
+## More complicated circuits<a name="complicated"></a>
 
 This is the point where we made a mistake. We had working AND, NAND and even XOR gates (the latter require 6 transistors and are therefore a lot more error-prone. We now planned to use those gates to build a more complicated circuit. Instead, we probably should have ordered a few integrated circuits. They are simply, fairly cheap components that contain a few logic gates. This would have allowed us to focus more on building the circuits and less on fixing the gates.
 
@@ -206,7 +216,7 @@ We were considering a few things:
 + **A clock / counter**
   Here the idea is to have an oscillating time source (real clocks use crystals, we were planning to use a capacitor that charges and discharges in a fairly constant period). This switching of currents then triggers a change in some kind of counting circuit that counts how often the time source signal has changed. This idea seemed both fun and doable in the short timeframe.
 
-## Binary Counter
+## Binary Counter<a name="counter"></a>
 
 After doing some research, we found out that the best way to build a counter is to chain a series of clocked JK flipflops together. In general, a flipflop is a circuit that can flip between two states. By using the J and K input pins of a JK flipflop, we can set it to 0 or 1 and it will remain in that state even after the inputn pin is turned off. Because it is a clocked flipflop, it has a third input pin that receives a clock signal. This clock signal periodically turns on and off. Whenever the switch from off to on occurs (called the *rising edge*), the flipflip accepts the state change signaled by the J and K input pin.
 
@@ -229,4 +239,5 @@ We were unable to fix those issues at the time of writing, so here are a few pic
 ## Sources
 
 [How a transistor works *by Ben Eater, last accessed on March 23rd, 2017*](https://www.youtube.com/watch?v=DXvAlwMAxiA)
+
 [Logic gate circuit diagrams](http://hyperphysics.phy-astr.gsu.edu/hbase/Electronic/trangate.html)
